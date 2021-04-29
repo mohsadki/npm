@@ -4,7 +4,7 @@ web:
         - "8080:80"
     volumes:
         - /home/msed/src:/src
-        - /home/msed/site.conf:/etc/nginx/conf.d/site.conf
+#        - /home/msed/site.conf:/etc/nginx/conf.d/site.conf
     links:
             - php
 php:
