@@ -3,5 +3,9 @@ web:
     ports:
         - "8080:80"
     volumes:
-        - ./src:/src
-        - ./site.conf:/etc/nginx/conf.d/site.conf
+        - /home/msed/src:/src
+        - /home/msed/site.conf:/etc/nginx/conf.d/site.conf
+    links:
+            - php
+php:
+    image: php:7-fpm
