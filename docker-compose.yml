@@ -4,8 +4,10 @@ web:
         - "8080:80"
     volumes:
         - /home/msed/src:/usr/share/nginx/html
-#        - /home/msed/site.conf:/etc/nginx/conf.d/site.conf
+        - /home/msed/site.conf:/etc/nginx/conf.d/site.conf
     links:
             - php
 php:
     image: php:7-fpm
+    volumes:
+        - /home/msed/src:/usr/share/nginx/html    
