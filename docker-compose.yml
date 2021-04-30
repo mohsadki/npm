@@ -3,11 +3,11 @@ web:
     ports:
         - "8080:80"
     volumes:
-        - /home/msed/src:/usr/share/nginx/html
-        - /home/msed/nginx.conf:/etc/nginx/conf.d
+        - /home/msed/npm/src:/usr/share/nginx/html
+        - /home/msed/npm/nginx.conf:/etc/nginx/conf.d
     links:
         - php
 php:
     image: php:7-fpm
     volumes:
-        - /home/msed/src:/usr/share/nginx/html
+        - /home/msed/npm/src:/usr/share/nginx/html
