@@ -1,7 +1,7 @@
 web:
     image: nginx:latest
     ports:
-        - "8080:80"
+        - "8081:80"
     volumes:
         - /home/msed/npm/src:/usr/share/nginx/html
         - /home/msed/npm/nginx.conf:/etc/nginx/conf.d
